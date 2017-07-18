@@ -18,10 +18,13 @@
             <block type="mdg_giftregistry/adminhtml_registries" name="registries" />
         </reference>
     </adminhtml_giftregistry_index>
-    <adminhtml_giftregistry_edit>
+    <adminhtml_giftregistry_new>
         <reference name="content">
             <block type="mdg_giftregistry/adminhtml_registries_edit" name="new_registry_tabs" />
         </reference>
+    </adminhtml_giftregistry_new>
+    <adminhtml_giftregistry_edit>
+        <update handle="adminhtml_giftregistry_new"/>
     </adminhtml_giftregistry_edit>
 
 </layout>
