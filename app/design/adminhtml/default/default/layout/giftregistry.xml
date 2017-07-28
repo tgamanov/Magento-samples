@@ -8,6 +8,10 @@
                 </block>
                 <action method="addTab">
                     <name>mdg_giftregistry</name>
+                    <block>mdg_giftregistry/adminhtml_customer_edit_tab_giftregistry</block>
+                </action>
+                <action method="addTab">
+                    <name>mdg_giftregistry</name>
                     <block>tab_giftregistry_main</block>
                 </action>
             </reference>
@@ -24,7 +28,9 @@
         </reference>
     </adminhtml_giftregistry_new>
     <adminhtml_giftregistry_edit>
-        <update handle="adminhtml_giftregistry_new"/>
+        <reference name="content">
+            <block type="mdg_giftregistry/adminhtml_registries_edit" name="new_registry_tabs" />
+        </reference>
     </adminhtml_giftregistry_edit>
 
 </layout>

@@ -48,6 +48,9 @@ class Mdg_Giftregistry_IndexController extends Mage_Core_Controller_Front_Action
 
     public function editAction()
     {
+	    $registry_id = $this->getRequest()->getParam('registry_id');
+	    $registry = Mage::getModel('mdg_giftregistry/entity')->load($registry_id);
+	    Mage::register('loaded_registry', $registry);
         $this->loadLayout();
         $this->renderLayout();
         return $this;
